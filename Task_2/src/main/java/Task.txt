@@ -1,0 +1,13 @@
+Task 2.
+
+1. Write a system (client-server) in which the client asks questions,
+the server responds randomly from multiple choices for each question
+For example:
+"How are you?" -> {"Good", "Excellent", "Bad"}
+
+2. There must be a question:
+"My name is {name}" and the response "Hello name!"
+
+3. Come up with 3 multiple choice questions of your own
+
+Example: https://github.com/ksenikeev/dis113/tree/master/lab02/src/ru/itis/dis/lab02
