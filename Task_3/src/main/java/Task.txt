@@ -1,0 +1,40 @@
+Task 3:
+
+Write a program (client - server), implements the deposit of money in the bank
+
+1. The client sends a money transfer to the bank:
+
+    + generates an XML document:
+
+         xml
+                <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                <transaction>
+                    <client>
+                        <name>Client1</name>
+                        <passport>1111 111111</passport>
+                    </client>
+                    <summ>1000.00</summ>
+                    <date>yyyyMMddHH:mm</date>
+                </transaction>
+
+
+    + sends it via socket to the server
+
+2. The server receives the XML document.
+    + Looking for a client by passport
+    + If the client is found, then adds the specified amount to the account
+    + If the client is not found, then creates a new one and puts the amount on the account
+    + Sends a response to the client - an XML document:
+         xml
+                <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                <accountinfo>
+                    <accountnumber>101</accountnumber>
+                    <summ>2000.00</summ>
+                    <date>yyyyMMddHH:mm</date>
+                </accountinfo>
+
+3. Data transfer must be done through sockets
+
+    protocol:
+        * 4 bytes - message length
+        * message (XML document)
